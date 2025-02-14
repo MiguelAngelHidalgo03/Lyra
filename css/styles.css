@@ -1,0 +1,137 @@
+:root {
+    --azul-claro: #99AECC;
+    --beige-titulos: #CCBB99;
+    --azul-marino: #2A384D;
+
+    --gris-muy-oscuro: #151515;
+
+    --icono-terciario: #B3B3B3;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris-claro: #D9D9D9;
+    --gris-oscuro: #0B0B0B;
+    --gris-medio: #B3B3B3;
+    
+    --gris-azulado: #2C2D2D;
+    --gris-neutro: #4B4C4C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-muy-oscuro);
+    color: var(--blanco);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gris-oscuro);
+    padding: 10px 20px;
+}
+
+.fondo{
+    background-color: var(--gris-muy-oscuro);
+    padding: 10px;
+    margin: 5px;
+}
+
+.divider {
+    /* Hay que hacer algo aquí para que haya una barra */
+}
+
+.logo img {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var( --azul-marino);
+    padding: 20px;
+    height: 100vh;
+    float: left;
+}
+
+.library h4 {
+    color: var(--negro);
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.library button {
+    background-color: var( --beige-titulos);
+    margin-bottom: 10px;
+    color: var(--negro);
+    font-weight: bold;
+    flex: 100;
+    
+    
+}
+
+.library h2 {
+    color: var(--beige-titulos);
+}
+
+.library-container {
+    background-color: var( --azul-claro);
+}
+
+.content {
+    background-color: var( --azul-marino);
+    color: var(--beige-titulos);
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.popular-artists, .explore-genres {
+    margin-bottom: 20px;
+}
+
+.artist-container, .genre-container {
+    display: flex;
+    gap: 10px;
+}
+
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--gris-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.song-img {
+    width: 50px;
+    height: 50px;
+    background-color: var(--gris-medio);
+    border-radius: 5px;
+}
+
+.song-details {
+    margin-left: 10px;
+}
