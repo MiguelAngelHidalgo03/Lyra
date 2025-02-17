@@ -1,0 +1,357 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body
+{
+    background-color: rgb(0, 0, 0);
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+header {
+    background-color: black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+}
+
+.logo img 
+{
+    margin-left:-1.5px;
+    width: 50px;
+    height: 50px;
+    height: auto;
+    max-height: 100%;
+}
+.logo h1
+{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 15px;
+    font-size: 22px;
+}
+.search 
+{
+    max-width: fit-content;
+    position: relative;
+    left: 135px;
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:200px;
+    /* border: 2px solid white; */
+}
+
+.search input {
+    width: 600px;
+    border:none;
+    /* width: 100%; */
+    padding: 15px 50px 15px 40px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(73, 73, 73);
+    margin:0;
+}
+.search input:hover {
+  
+    border: 1px solid #9a9a9a;
+ 
+}
+
+.search input::placeholder 
+{
+    color: rgb(218, 218, 218);
+    font-size: 17px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.header--actions {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header--actions button 
+{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 11px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    /* cursor: pointer; */
+    transition: background-color 0.3s, color 0.3s;
+}
+.header--actions button:last-child {
+   
+    border: 2px solid white; 
+   
+}
+
+.header--actions button:hover 
+{
+   
+    color: rgb(65, 195, 255);
+}
+.header--actions button:last-child:hover {
+    background-color:rgb(65, 195, 255);
+    color: black;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estilos para mostrar el contenido */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.anounce
+{
+    border-radius: 8px;
+    position: relative; 
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    padding: 280px 250px;
+    font-weight: 100;
+    text-align: center;
+    z-index: 1; 
+    background-image: url(../img/CuGO_FYTQ36d-bX5mi3Yfg.webp);
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+
+
+}
+.anounce::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: -1; 
+    border-radius: 8px;
+}
+.anounce.show {
+    opacity: 1;
+}
+
+.anounce h1
+{
+    font-size: 50px;
+    /* margin-top: 100px; */
+ 
+}
+
+.anouncep
+{
+   margin-top: 110px;
+     font-size: 25px;
+}
+
+
+.anounce button
+{
+    margin-top: 40px;
+    margin-bottom: 80px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #CCBB99;
+    color: black;
+    font-size: 18px;
+    font-weight: 550;
+    /* cursor: pointer; */
+    transition: background-color 0.3s, color 0.3s;
+}
+.anounce button:hover
+{
+    background-color: white;
+    color: black;
+}
+.content {
+    border-radius: 8px;
+    max-width: 100%;
+    background-color: rgb(29, 29, 29);
+    height: auto;
+    margin-top:85px;
+    margin-left:88px;
+    margin-right:5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content-title 
+{
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+
+    /* margin: 0 auto; */
+ }
+ .content-title h1
+ {
+    margin-top: 50px;
+    font-size: 40px;
+ }
+ .content-title p{
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+ }
+ .content-title h2
+ {
+font-size: 30px;
+ }
+
+.planes {
+    margin: 150px auto;
+    padding: 0;
+    display: table;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    /* font-weight: 00; */
+    font-weight: lighter;
+   
+}   
+.planes table
+{
+    border-collapse: collapse;
+    /* padding: 20px; */
+}
+.planes table th, td
+{
+    padding: 15px;
+    
+}
+
+.planes table td{
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.planes table tr:not(:first-child):hover{
+    background-color: #c5c5c534;
+}
+
+tr.border-bottom {
+    border-bottom: 2px solid #ffffff;
+}
+td img
+{
+margin-left: 65px;
+width: 30px;
+height: 30px;
+
+}
+.S8eI0WpcfpToa5Gvdwoj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+:root {
+    --secondary-color: rgb(147 176 208);
+}
+
+.container {
+    background: #191919;
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+}
+
+
+nav {
+    position: fixed;
+    top:85px;
+    margin-left:3px;
+    z-index: 50;
+    display: flex;
+    max-width: 100px;
+    justify-content: flex-start; 
+    flex-direction: column;
+    height: 100vh;
+    background: var(--secondary-color);
+    border-radius: 8px;
+}
+
+nav a {
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+   
+    text-align: center;
+}
+
+.nav-lib {
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    padding:15px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.nav-lib img {
+    max-width: 100%;
+ 
+    max-height: 100%;
+    object-fit: contain; 
+}
+.nav-lib img:hover {
+   background-color: rgb(255, 255, 255); 
+}
+
+
+
