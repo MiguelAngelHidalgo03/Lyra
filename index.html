@@ -11,6 +11,7 @@
     <header>
         <div class="logo">
             <img src="img/Lyralogo.svg" alt="Logo Lyra"/>
+            <h1>Lyra Project<h1>
         </div> 
         <div class="search">
             <div>
@@ -27,32 +28,28 @@
     </header>
     
     <main>
-        <div class="fondo">
-            <aside class="sidebar">
-                <div class="library">
-                    <h2>Tu biblioteca</h2>
-                    <div class="library-container">
-                        <h4>Organiza tu música a tu manera</h4>
-                        <button>Crear lista</button>
-                    </div>
-                    <div class="library-container">
-                        <h4>Comparte tu talento con el mundo, sin costo</h4>
-                        <button>Subir música</button>
-                    </div>
-                    <div class="library-container">
-                        <h4>Y mucho más... ¡Regístrate totalmente gratis!</h4>
-                        <button>Explorar</button>
-                    </div>
+        <aside class="sidebar">
+            <div class="library">
+                <h2>Tu biblioteca</h2>
+                <div class="library-container">
+                    <h4>Organiza tu música a tu manera</h4>
+                    <button>Crear lista</button>
                 </div>
-            </aside>
+                <div class="library-container">
+                    <h4>Comparte tu talento con el mundo, sin costo</h4>
+                    <button>Subir música</button>
+                </div>
+                <div class="library-container">
+                    <h4>Y mucho más... ¡Regístrate totalmente gratis!</h4>
+                    <button>Explorar</button>
+                </div>
+            </div>
+        </aside>
     
-            <!-- Divisor entre sidebar y content -->
-            <div class="divider"></div>
-    
-            <section class="content">
-                <div class="popular-artists">
-                    <h2>Artistas populares</h2>
-                    <div class="artist-container" id="artistContainer">
+        <section class="content">
+            <div class="popular-artists">
+                <h2>Artistas populares</h2>
+                <div class="artist-container" id="artistContainer">
                         <img src="ruta-a-tu-imagen.jpg" alt="Artist 1" class="round-img">
                         <img src="ruta-a-tu-imagen.jpg" alt="Artist 2" class="round-img">
                         <img src="ruta-a-tu-imagen.jpg" alt="Artist 3" class="round-img">
@@ -60,37 +57,55 @@
                         <img src="ruta-a-tu-imagen.jpg" alt="Artist 5" class="round-img">
                     </div>
                 </div>
-                <div class="explore-genres">
-                    <h2>Explora géneros</h2>
-                    <div class="genre-container" id="genreContainer">
-                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 1" class="square-img">
-                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 2" class="square-img">
-                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 3" class="square-img">
-                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 4" class="square-img">
-                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 5" class="square-img">
-                    </div>
+            <div class="explore-genres">
+                <h2>Explora géneros</h2>
+                <div class="genre-container" id="genreContainer">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Genre 1" class="square-img">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Genre 2" class="square-img">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Genre 3" class="square-img">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Genre 4" class="square-img">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Genre 5" class="square-img">
                 </div>
-            </section>
+            </div>
+        </section>
+
+
+        <div class="music-player">
+            <div class="player-info">
+                <div class="album-art">
+                    <img src="img/hqdefault.jpg" alt="Album Art">
+                </div>
+                <div class="track-info">
+                    <p class="track-name">Canción de ejemplo</p>
+                    <p class="artist-name">Cantante de ejemplo</p>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button class="control-btn prev-btn">
+                    <img src="img/repetir.png" alt="Previous">
+                </button>
+                <button class="control-btn play-btn">
+                    <img src="img/play.png" alt="Play">
+                </button>
+                <button class="control-btn next-btn">
+                    <img src="img/siguiente.png" alt="Next">
+                </button>
+                <button class="control-btn loop-btn">
+                    <img src="img/re.png" alt="Loop">
+                </button>
+                <input type="range" class="progress-bar" value="0" max="100">
+                <div class="time-info">
+                    <span class="current-time">0:00</span>
+                    <span class="total-time">3:30</span>
+                </div>
+            </div>
         </div>
+
+        
     </main>
     
+
     
-    <footer class="player">
-        <div class="song-info">
-            <div class="song-img">
-                <img src="ruta-a-tu-imagen.jpg" alt="" class="player-img">
-            </div>
-            <div class="song-details">
-                <p id="songArtist">Nombre Artista</p>
-                <p id="songTitle">Nombre Canción</p>
-            </div>
-        </div>
-        <div class="controls">
-            <button>⏮</button>
-            <button>⏯</button>
-            <button>⏭</button>
-        </div>
-    </footer>
     
     <script src="JS/script.js"></script>
 </body>
