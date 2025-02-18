@@ -11,12 +11,20 @@
     <header>
         <div class="logo">
             <img src="img/Lyralogo.svg" alt="Logo Lyra"/>
-        </div>          
-        <input type="text" placeholder="Buscar..." class="search-bar">
-        <button>Instalar app</button>
-        <button>Registrarte</button>
-        <button>Iniciar sesión</button>
-    </header>
+        </div> 
+        <div class="search">
+            <div>
+                <img src="https://img.icons8.com/ios_filled/512/FFFFFF/search.png" class="search-icon" alt="search icon">
+            </div>
+            <input type="text" id="search" name="search" class="input" placeholder="¿Que canción buscas?">
+            
+        </div>        
+        <div class="header--actions">
+            <button>Instalar app</button>
+            <button>Registrarte</button>
+            <button>Iniciar Sesión</button>
+        </div>
+    </header>
     
     <main>
         <div class="fondo">
@@ -44,11 +52,23 @@
             <section class="content">
                 <div class="popular-artists">
                     <h2>Artistas populares</h2>
-                    <div class="artist-container" id="artistContainer"></div>
+                    <div class="artist-container" id="artistContainer">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Artist 1" class="round-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Artist 2" class="round-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Artist 3" class="round-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Artist 4" class="round-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Artist 5" class="round-img">
+                    </div>
                 </div>
                 <div class="explore-genres">
                     <h2>Explora géneros</h2>
-                    <div class="genre-container" id="genreContainer"></div>
+                    <div class="genre-container" id="genreContainer">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 1" class="square-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 2" class="square-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 3" class="square-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 4" class="square-img">
+                        <img src="ruta-a-tu-imagen.jpg" alt="Genre 5" class="square-img">
+                    </div>
                 </div>
             </section>
         </div>
@@ -57,7 +77,9 @@
     
     <footer class="player">
         <div class="song-info">
-            <div class="song-img"></div>
+            <div class="song-img">
+                <img src="ruta-a-tu-imagen.jpg" alt="" class="player-img">
+            </div>
             <div class="song-details">
                 <p id="songArtist">Nombre Artista</p>
                 <p id="songTitle">Nombre Canción</p>
