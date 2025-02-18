@@ -145,7 +145,6 @@ header {
     font-weight: 100;
     text-align: center;
     z-index: 1; 
-    background-image: url(../img/CuGO_FYTQ36d-bX5mi3Yfg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -165,6 +164,17 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); 
     z-index: -1; 
+    border-radius: 0.5rem; /* 8px */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
     border-radius: 0.5rem; /* 8px */
 }
 
@@ -352,7 +362,103 @@ nav a {
     background-color: rgb(255, 255, 255); 
 }
 
+/* Music Player Styles */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #191919;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* 2px 4px */
+    z-index: 1000;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+}
+
+.album-art img {
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
+    margin-right: 1rem;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-name {
+    font-size: 1rem; /* 16px */
+    font-weight: bold;
+}
+
+.artist-name {
+    font-size: 0.875rem; /* 14px */
+    color: #ccc;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.control-btn img {
+    width: 1.5rem; /* 24px */
+    height: 1.5rem; /* 24px */
+}
+
+.progress-bar {
+    width: 100%;
+    margin: 0 1rem;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    width: 5rem; /* 80px */
+}
+
+.current-time, .total-time {
+    font-size: 0.875rem; /* 14px */
+}
+
 /* Media Queries */
+@media (max-width: 767px) {
+    .music-player {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .player-controls {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .progress-bar {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .time-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
 
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 767px) {
