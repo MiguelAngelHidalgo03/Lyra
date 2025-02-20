@@ -11,21 +11,20 @@
     <header>
         <div class="logo">
             <img src="img/Lyralogo.svg" alt="Logo Lyra"/>
-            <h1>Lyra Project<h1>
+            <h1>Lyra Project</h1>
         </div> 
         <div class="search">
             <div>
                 <img src="https://img.icons8.com/ios_filled/512/FFFFFF/search.png" class="search-icon" alt="search icon">
             </div>
-            <input type="text" id="search" name="search" class="input" placeholder="¿Que canción buscas?">
-            
+            <input type="text" id="search" name="search" class="input" placeholder="¿Qué canción buscas?">
         </div>        
         <div class="header--actions">
             <button>Instalar app</button>
             <button>Registrarte</button>
             <button>Iniciar Sesión</button>
         </div>
-    </header>
+    </header>
     
     <main>
         <aside class="sidebar">
@@ -50,25 +49,106 @@
             <div class="popular-artists">
                 <h2>Artistas populares</h2>
                 <div class="artist-container" id="artistContainer">
+                    <button class="prev" onclick="prevArtist()">&#10094;</button>
+                    <div>
                         <img src="/img/CTE.jpeg" alt="Artist 1" class="round-img">
-                        <img src="/img/EGOIST.jpg" alt="Artist 2" class="round-img">
-                        <img src="/img/ID+.webp" alt="Artist 3" class="round-img">
-                        <img src="/img/RED.jpg" alt="Artist 4" class="round-img">
-                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>Crown The Empire</p>
                     </div>
+                    <div>
+                        <img src="/img/EGOIST.jpg" alt="Artist 2" class="round-img">
+                        <p>EGOIST</p>
+                    </div>
+                    <div>
+                        <img src="/img/ID+.webp" alt="Artist 3" class="round-img">
+                        <p>Imagine Dragons</p>
+                    </div>
+                    <div>
+                        <img src="/img/RED.jpg" alt="Artist 4" class="round-img">
+                        <p>Red</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <div>
+                        <img src="/img/SOAD.webp" alt="Artist 5" class="round-img">
+                        <p>System Of A Down</p>
+                    </div>
+                    <button class="next" onclick="nextArtist()">&#10095;</button>
                 </div>
+            </div>
             <div class="explore-genres">
                 <h2>Explora géneros</h2>
                 <div class="genre-container" id="genreContainer">
-                    <img src="/img/HeavyMetal.jpg" alt="Genre 1" class="square-img">
-                    <img src="/img/Reggaeton.webp" alt="Genre 2" class="square-img">
-                    <img src="/img/Pop.jpg" alt="Genre 3" class="square-img">
-                    <img src="/img/Rap.PNG" alt="Genre 4" class="square-img">
-                    <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                    <button class="prev" onclick="prevGenre()">&#10094;</button>
+                    <div>
+                        <img src="/img/HeavyMetal.jpg" alt="Genre 1" class="square-img">
+                        <p>HeavyMetal</p>
+                    </div>
+                    <div>
+                        <img src="/img/Reggaeton.webp" alt="Genre 2" class="square-img">
+                        <p>Reggaeton</p>
+                    </div>
+                    <div>
+                        <img src="/img/Pop.jpg" alt="Genre 3" class="square-img">
+                        <p>Pop</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rap.PNG" alt="Genre 4" class="square-img">
+                        <p>Rap</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                        <p>Rock</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                        <p>Rock</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                        <p>Rock</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                        <p>Rock</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                        <p>Rock</p>
+                    </div>
+                    <div>
+                        <img src="/img/Rock.jpg" alt="Genre 5" class="square-img">
+                        <p>Rock</p>
+                    </div>  
+                    <button class="next" onclick="nextGenre()">&#10095;</button>
                 </div>
             </div>
         </section>
-
 
         <div class="music-player">
             <div class="player-info">
@@ -86,7 +166,6 @@
                 <div class="progress-time total-time">0:00</div>
             </div>
             <div class="player-controls">
-              
                 <button class="control-btn prev-btn">
                     <img src="img/repetir.png" alt="Previous">
                 </button>
@@ -98,17 +177,11 @@
                 </button>
                 <button class="control-btn loop-btn">
                     <img src="img/re.png" alt="Loop">
-                </button>
-               
+                </button>    
             </div>
         </div>
-
-        
     </main>
     
-
-    
-    
-    <script src="JS/script.js"></script>
+    <script src="JS/funcionabilidad.js"></script>
 </body>
 </html>
