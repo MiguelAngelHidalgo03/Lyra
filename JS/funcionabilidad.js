@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const controlButtons = document.querySelectorAll('.control-btn img');
 
@@ -23,9 +21,47 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const artistContainer = document.querySelector('.artist-container');
+    const genreContainer = document.querySelector('.genre-container');
+    const imgWidth = artistContainer.querySelector('img').clientWidth;
+    let artistIndex = 0;
+    let genreIndex = 0;
+
+    function showArtists(n) {
+        const artists = artistContainer.children;
+        const totalArtists = artists.length;
+        const visibleArtists = 6; // Número de imágenes visibles
+        if (n >= totalArtists - visibleArtists + 1) { artistIndex = 0; }
+        if (n < 0) { artistIndex = totalArtists - visibleArtists; }
+        artistContainer.style.transform = `translateX(${-artistIndex * imgWidth}px)`;
+    }
+
+    function showGenres(n) {
+        const genres = genreContainer.children;
+        const totalGenres = genres.length;
+        const visibleGenres = 6; // Número de imágenes visibles
+        if (n >= totalGenres - visibleGenres + 1) { genreIndex = 0; }
+        if (n < 0) { genreIndex = totalGenres - visibleGenres; }
+        genreContainer.style.transform = `translateX(${-genreIndex * imgWidth}px)`;
+    }
+
+    prevButton.addEventListener('click', function() {
+         showArtists(--artistIndex);
+        showGenres(--genreIndex);
+    });
+
+    nextButton.addEventListener('click', function() {
+        showArtists(++artistIndex);
+        showGenres(++genreIndex);
+    });
+
+    // Initialize the display
+    showArtists(artistIndex);
+    showGenres(genreIndex);
 });
-
-
 
 
 
@@ -155,47 +191,3 @@ progressBar.addEventListener('change', () => {
 });
 
 loadSong(currentSongIndex);
-
-
-let artistIndex = 0;
-let genreIndex = 0;
-
-function showArtists(n) {
-    const artistContainer = document.getElementById('artistContainer');
-    const artists = artistContainer.children;
-    const totalArtists = artists.length;
-    const visibleArtists = Math.floor(artistContainer.parentElement.clientWidth / artists[0].clientWidth);
-    if (n >= totalArtists - visibleArtists + 1) { artistIndex = 0 }
-    if (n < 0) { artistIndex = totalArtists - visibleArtists }
-    artistContainer.style.transform = `translateX(${-artistIndex * 100 / visibleArtists}%)`;
-}
-
-function showGenres(n) {
-    const genreContainer = document.getElementById('genreContainer');
-    const genres = genreContainer.children;
-    const totalGenres = genres.length;
-    const visibleGenres = Math.floor(genreContainer.parentElement.clientWidth / genres[0].clientWidth);
-    if (n >= totalGenres - visibleGenres + 1) { genreIndex = 0 }
-    if (n < 0) { genreIndex = totalGenres - visibleGenres }
-    genreContainer.style.transform = `translateX(${-genreIndex * 100 / visibleGenres}%)`;
-}
-
-function nextArtist() {
-    showArtists(++artistIndex);
-}
-
-function prevArtist() {
-    showArtists(--artistIndex);
-}
-
-function nextGenre() {
-    showGenres(++genreIndex);
-}
-
-function prevGenre() {
-    showGenres(--genreIndex);
-}
-
-// Initialize the display
-showArtists(artistIndex);
-showGenres(genreIndex);

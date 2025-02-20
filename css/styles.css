@@ -162,7 +162,7 @@ button {
     width: 25rem; /* 250px */
     background-color: var(--azul-marino);
     padding: 1.25rem;
-    height: 32rem;
+    height: 80%;
     float: left;
     position: fixed;
     top: 5rem;
@@ -210,20 +210,32 @@ button {
     padding: 1.25rem;
     position: fixed;
     top: 5rem;
-    height: 32rem;
-    width: 65rem;
+    height: 80%;
+    width: 75%;
 }
 
 .popular-artists, .explore-genres {
     margin-bottom: 1.25rem;
 }
 
+.popular-artists h2, .explore-genres h2 {
+    margin-bottom: 1rem; /* Ajusta la distancia según sea necesario */
+}
+
 .artist-container, .genre-container {
     position: relative;
     display: flex;
     align-items: center;
-
+    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+    width: 100%; /* Asegura que el contenedor tenga un ancho fijo */
 }
+
+.artist-container img, .genre-container img {
+    max-width: 100%;
+    height: auto;
+    flex: 0 0 calc(100% / 6); /* Muestra 6 imágenes a la vez */
+}
+
 
 .artist-container, .genre-container p{
     text-align: center;
