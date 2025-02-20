@@ -374,8 +374,8 @@ button {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: var(--gris-neutro);
-    color: var(--blanco);
+    background-color: #191919;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -387,25 +387,30 @@ button {
 .player-info {
     display: flex;
     align-items: center;
+    justify-content:left ;
+    width: 25%;
 }
 
 .album-art img {
-    width: 3.125rem; /* 50px */
-    height: 3.125rem; /* 50px */
+    width: 2.125rem; /* 50px */
+    height: 2.125rem; /* 50px */
     margin-right: 1rem;
 }
 
 .track-info {
     display: flex;
     flex-direction: column;
+    margin-right: 2rem; /* Fixed spacing */
 }
 
 .track-name {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem; /* 16px */
     font-weight: bold;
 }
 
 .artist-name {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.875rem; /* 14px */
     color: #ccc;
 }
@@ -413,8 +418,9 @@ button {
 .player-controls {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    margin-left: 1rem;
+    justify-content: right;
+    width: 25%;
+    margin-right: 0.5rem; /* Fixed spacing */
 }
 
 .control-btn {
@@ -430,16 +436,36 @@ button {
 }
 
 .progress-bar {
-    width: 100%;
+    width: 25rem; /* Adjusted width */
     margin: 0 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ccc;
+    height: 0.25rem; /* 4px */
+    border-radius: 0.125rem; /* 2px */
 }
 
-.time-info {
-    display: flex;
-    justify-content: space-between;
-    width: 5rem; /* 80px */
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.8rem; /* 16px */
+    height: 1rem; /* 16px */
+    background: rgb(65, 195, 255);
+    border-radius: 50%;
+    cursor: pointer;
 }
+
+.progress-bar::-moz-range-thumb {
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    background: rgb(65, 195, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
 
 .current-time, .total-time {
+
     font-size: 0.875rem; /* 14px */
 }
