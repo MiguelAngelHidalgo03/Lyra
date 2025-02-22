@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Caja del formulario */
+.login-box {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 90px;
+    margin-bottom: 1rem;
+}
+
+/* Botones de redes sociales */
+.social-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilo de etiquetas */
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c84b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Enlace de registro */
+.register-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #6c84b5;
+    text-decoration: none;
+}
+
+/* Accesibilidad: Focus */
+input:focus,
+button:focus {
+    outline: 2px solid #6c84b5;
+}
