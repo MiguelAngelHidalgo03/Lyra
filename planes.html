@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes</title>
+    <link rel="icon" href="img/Lyralogo.svg">
+    <link rel="stylesheet" href="css/planes.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/Lyralogo.svg" alt="Logo Lyra" /></a>
+            <h1>Lyra Project</h1>
+        </div>
+        <div class="search">
+            <div>
+                <img src="img/search.png" class="search-icon" alt="search icon">
+            </div>
+            <input type="text" id="search" name="search" class="input" placeholder="¿Que canción buscas?">
+        </div>
+        <div class="header--actions">
+            <button>Instalar app</button>
+            <button onclick="window.location.href='register.html'">Registrarte</button>
+            <button onclick="window.location.href='login.html'">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-lib"><img src="img/navLeft/biblioteca.png" alt="">
+            <div class="hover-text">Mis listas</div>
+        </div>
+        <div class="nav-lib"><img src="img/navLeft/plus.png" alt="" class="plus-icon">
+            <div class="hover-text">Añadir lista</div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="anounce">
+            <video autoplay muted loop class="background-video">
+                <source src="video/lyravideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="anounceh">
+                <h1>Es hora de pasarte a </h1>
+                <h1>Lyra premium</h1>
+            </div>
+            <div class="anouncep">
+                <p class="hidden">Disfruta de contenido en maxima calidad </p>
+                <p class="hidden">sin limites por un precio asequible</p>
+            </div>
+            <button class="hidden botonPoint" id="viewPlansButton">Ver todos los planes</button>
+        </div>
+
+        <div class="content-body">
+
+            <div class="content-title hidden">
+                <h1>Para una mejor experienca </h1>
+                <h1>puedes contratar uno de nuestros planes </h1>
+                <p>Pásate a Premium y disfruta del control total de lo que escuchas.</p>
+            </div>
+            <div class="content-title hidden">
+                <h2>Diferencias entre planes</h2>
+            </div>
+            <div class="planes hidden">
+                <table class="hidden">
+                    <tbody class="hidden">
+
+                        <tr class="border-bottom hidden">
+                            <th>Que incluye</th>
+                            <th>Plan Básico</th>
+                            <th>Plan Premium</th>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td>Escucha tu música favorita sin anuncios</td>
+                            <td>
+                                <div class="S8eI0WpcfpToa5Gvdwoj">—</div>
+                            </td>
+                            <td><img src="img/okay.png" alt="Okey icon" /></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td>Descargar canciones</td>
+                            <td>
+                                <div class="S8eI0WpcfpToa5Gvdwoj">—</div>
+                            </td>
+                            <td><img src="img/okay.png" alt="Okey icon" /></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td>Escucha canciones en cualquier orden</td>
+                            <td>
+                                <div class="S8eI0WpcfpToa5Gvdwoj">—</div>
+                            </td>
+                            <td><img src="img/okay.png" alt="Okey icon" /></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td>Audio de alta calidad</td>
+                            <td>
+                                <div class="S8eI0WpcfpToa5Gvdwoj">—</div>
+                            </td>
+                            <td><img src="img/okay.png" alt="Okey icon" /></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td>Escucha lo que quieras con tus amigos, en tiempo real</td>
+                            <td>
+                                <div class="S8eI0WpcfpToa5Gvdwoj">—</div>
+                            </td>
+                            <td><img src="img/okay.png" alt="Okey icon" /></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td>Organiza la cola de reproducción</td>
+                            <td>
+                                <div class="S8eI0WpcfpToa5Gvdwoj">—</div>
+                            </td>
+                            <td><img src="img/okay.png" alt="Okey icon" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="metodos-de-pago">
+                <h2>Métodos de pago</h2>
+                <p>Cancela cuando quieras</p>
+                <div class="method-container hidden">
+                    <div class="method-logo">
+                        <img src="img/payMethods/visa.jpg" alt="Visa" width="100" height="50">
+
+                    </div>
+                    <div class="method-logo">
+
+                        <img src="img/payMethods/mastercard.jpg" alt="Mastercard" width="100" height="50">
+                    </div>
+                    <div class="method-logo">
+
+                        <img src="img/payMethods/paypal.png" alt="PayPal" width="100" height="50">
+                    </div>
+                    <div class="method-logo">
+
+                        <img src="img/payMethods/applepay.png" alt="Apple Pay" width="100" height="50">
+                    </div>
+                </div>
+            </div>
+
+            <div id="choosePlan"></div>
+            <div class="choose-plan">
+                <h1>¿Qué plan te gustaría elegir?</h1>
+                <p>Escoge el que se adapte mejor a tus necesidades</p>
+                <div id="choosePlan-1" class="choose-plan-container">
+                    <div class="choose-plan-item">
+                        <div class="plan-header">
+                            <img src="img/Lyralogo.svg" alt="Logo Lyra" class="plan-logo">
+                            <span class="plan-premium">Premium</span>
+                        </div>
+                        <h2 class="plan-title">Plan Básico</h2>
+                        <hr>
+                        <h3>Obtienes:</h3>
+                        <ul>
+                            <li>1 cuenta premium de Lyra</li>
+                            <li>Reproducciones sin anuncios</li>
+                            <li>Crea listas de reproducción sin límites</li>
+                            <li>Reproduce las canciones en el orden que quieras</li>
+                        </ul>
+                        <h3>Cobro:</h3>
+                        <ul>
+                            <li>7,99$/mes</li>
+                            <li>50$/año</li>
+                        </ul>
+                        <button class="plan-button" onclick="window.location.href='pago.html'">Contratar</button>
+                    </div>
+                    <div class="choose-plan-item">
+                        <div class="plan-header">
+                            <img src="img/Lyralogo.svg" alt="Logo Lyra" class="plan-logo">
+                            <span class="plan-premium">Premium</span>
+                        </div>
+                        <h2 class="plan-title">Plan Duo</h2>
+                        <hr>
+                        <h3>Obtienes:</h3>
+                        <ul>
+                            <li>2 cuentas premium de Lyra</li>
+                            <li>Reproducciones sin anuncios</li>
+                            <li>Crea listas de reproducción sin límites</li>
+                            <li>Reproduce las canciones en el orden que quieras</li>
+                        </ul>
+                        <h3>Cobro:</h3>
+                        <ul>
+                            <li>12,99$/mes</li>
+                            <li>70$/año</li>
+                        </ul>
+                        <button class="plan-button" onclick="window.location.href='pago.html'">Contratar</button>
+                    </div>
+                    <div class="choose-plan-item">
+                        <div class="plan-header">
+                            <img src="img/Lyralogo.svg" alt="Logo Lyra" class="plan-logo">
+                            <span class="plan-premium">Premium</span>
+                        </div>
+                        <h2 class="plan-title">Plan Estudiante</h2>
+                        <hr>
+                        <h3>Obtienes:</h3>
+                        <ul>
+                            <li>1 cuenta premium de Lyra</li>
+                            <li>Reproducciones sin anuncios</li>
+                            <li>Crea listas de reproducción sin límites</li>
+                            <li>Reproduce las canciones en el orden que quieras</li>
+                        </ul>
+                        <h3>Cobro:</h3>
+                        <ul>
+                            <li>4,99$/mes</li>
+                            <li>30$/año</li>
+                        </ul>
+                        <button class="plan-button" onclick="window.location.href='pago.html'">Contratar</button>
+                    </div>
+                    <div class="choose-plan-item">
+                        <div class="plan-header">
+                            <img src="img/Lyralogo.svg" alt="Logo Lyra" class="plan-logo">
+                            <span class="plan-premium">Premium</span>
+                        </div>
+                        <h2 class="plan-title">Plan Familiar</h2>
+                        <hr>
+                        <h3>Obtienes:</h3>
+                        <ul>
+                            <li>6 cuentas premium de Lyra</li>
+                            <li>Reproducciones sin anuncios</li>
+                            <li>Crea listas de reproducción sin límites</li>
+                            <li>Reproduce las canciones en el orden que quieras</li>
+                        </ul>
+                        <h3>Cobro:</h3>
+                        <ul>
+                            <li>19,99$/mes</li>
+                            <li>100$/año</li>
+                        </ul>
+                        <button class="plan-button" onclick="window.location.href='pago.html'">Contratar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions">
+                <div class="question-container">
+                    <h1>¿Tienes alguna pregunta?</h1>
+                    <div class="question-item">
+                        <div class="question-header hidden">
+                            <h2>¿Cómo puedo cancelar mi suscripción?</h2>
+                            <img src="img/dropdown.png" alt="Dropdown" class="dropdown-icon">
+                        </div>
+                        <div class="question-content">
+                            <p>Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta.
+                            </p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-header hidden">
+                            <h2>¿Puedo compartir mi cuenta con otras personas?</h2>
+                            <img src="img/dropdown.png" alt="Dropdown" class="dropdown-icon">
+                        </div>
+                        <div class="question-content">
+                            <p>Los planes individuales están diseñados para un solo usuario. Sin embargo, ofrecemos
+                                planes familiares que permiten compartir la cuenta con hasta 6 personas.</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-header hidden">
+                            <h2>¿Puedo cambiar de plan en cualquier momento?</h2>
+                            <img src="img/dropdown.png" alt="Dropdown" class="dropdown-icon">
+                        </div>
+                        <div class="question-content">
+                            <p>Sí, puedes cambiar de plan en cualquier momento desde la configuración de tu cuenta.</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-header hidden">
+                            <h2>¿Puedo usar mi cuenta en múltiples dispositivos?</h2>
+                            <img src="img/dropdown.png" alt="Dropdown" class="dropdown-icon">
+                        </div>
+                        <div class="question-content">
+                            <p>Sí, puedes usar tu cuenta en múltiples dispositivos. Sin embargo, solo puedes reproducir
+                                música en un dispositivo a la vez con un plan individual.</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>Sobre nosotros</h2>
+                    <p>Lyra Project es una pagina web diseñada especificamente para dar la maxima calidad de
+                        reproduccion de audio y dar a conocer numerosos artistas por el mundo.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Enlaces relacionados</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="planes.html">Plans</a></li>
+                        <li><a href="contacto.html">Contact</a></li>
+                        <li><a href="contacto.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contactanos</h2>
+                    <p>Email: support@lyra.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lyra Project</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="music-player">
+        <div class="player-info">
+            <div class="album-art">
+                <img src="img/playingSongs/default.jpg" alt="Album Art">
+            </div>
+            <div class="track-info">
+                <p class="track-name">La ultima ultima vez</p>
+                <p class="artist-name">Alvaro Díaz</p>
+            </div>
+        </div>
+        <div class="player-progress">
+            <div class="progress-time current-time">0:00</div>
+            <input type="range" class="progress-bar" value="0">
+            <div class="progress-time total-time">0:00</div>
+        </div>
+        <div class="player-controls">
+            <button class="control-btn prev-btn">
+                <img src="img/music-control/previous.png" alt="Previous">
+            </button>
+            <button class="control-btn play-btn">
+                <img src="img/music-control/play.png" alt="Play">
+            </button>
+            <button class="control-btn next-btn">
+                <img src="img/music-control/next.png" alt="Next">
+            </button>
+            <button class="control-btn loop-btn">
+                <img src="img/music-control/loop.png" alt="Loop">
+            </button>
+        </div>
+    </div>
+
+    <script src="js/planes.js"></script>
+</body>
+
+</html>

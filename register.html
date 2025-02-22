@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate en Lyra</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" href="img/Lyralogo.svg">
+</head>
+
+<body>
+    <div class="container">
+        <div class="register-box">
+            <a href="index.html"><img src="img/Lyralogo.svg" alt="Logo de Lyra" class="logo"></a>
+            <h1>Regístrate en Lyra</h1>
+
+            <button class="social-button">Registrarse con Google</button>
+            <button class="social-button">Registrarse con Facebook</button>
+
+            <form>
+                <label for="username">Crea tu nombre de usuario</label>
+                <input type="text" id="username" placeholder="Nombre de usuario" required>
+
+                <label for="email">Introduce tu correo electrónico</label>
+                <input type="email" id="email" placeholder="Dirección de correo electrónico" required>
+
+                <label for="password">Elige una contraseña</label>
+                <input type="password" id="password" placeholder="Contraseña de usuario" required>
+
+                <label for="birthdate">Introduce tu fecha de nacimiento:</label>
+                <div class="birthdate-group">
+                    <input type="text" id="day" placeholder="Día" required>
+                    <input type="text" id="month" placeholder="Mes" required>
+                    <input type="text" id="year" placeholder="Año" required>
+                </div>
+
+                <button type="submit" onclick="window.location.href='./login.html'" class="register-button">Regístrate
+                    en Lyra</button>
+            </form>
+
+            <p class="login-text">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

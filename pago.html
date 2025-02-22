@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyra</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pago.css">
+    <link rel="icon" href="img/Lyralogo.svg">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="indexLogged.html"><img src="img/Lyralogo.svg" alt="Logo Lyra" /></a>
+        </div>
+        <div class="search">
+            <div>
+                <img src="img/search.png" class="search-icon" alt="search icon">
+            </div>
+            <input type="text" id="search" name="search" class="input" placeholder="¿Qué canción buscas?">
+        </div>
+        <div class="header--actions">
+            <button>Instalar app</button>
+            <button onclick="window.location.href='register.html'">Registrarte</button>
+            <button id="login" onclick="window.location.href='login.html'">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <div class="recuadro">
+        <form id="formularioCompra" novalidate>
+            <div class="head">
+                <img src="img/LyralogoBlack.svg" alt="Logo Lyra">
+                <h1>Pago</h1>
+            </div>
+            <main>
+                <section>
+                    <div class="titulo">
+                        <h2>Compra</h2>
+                        <a href="planes.html" id="cambiarPlan">Cambiar de plan</a>
+                    </div>
+                    <div class="infoProd">
+                        <div class="infoPrincipal">
+                            <h3><span class="no_negrita">Plan Seleccionado:</span> Plan X</h3>
+                            <span class="precio">$0.00</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="titulo">
+                        <h2>Datos del comprador</h2>
+                    </div>
+                    <div class="inputs">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                            <span id="error-nombre" class="error-message" aria-live="polite">Por favor, introduce tu
+                                nombre.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                            <span id="error-apellidos" class="error-message" aria-live="polite">Por favor, introduce tus
+                                apellidos.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <span id="error-email" class="error-message" aria-live="polite">Por favor, introduce tu
+                                email.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" name="telefono" id="telefono" placeholder="Telefono">
+                            <span id="error-telefono" class="error-message" aria-live="polite">Por favor, introduce tu
+                                teléfono.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="titulo">
+                        <h2>Dirección de facturación</h2>
+                    </div>
+                    <div id="nuevaDireccion">
+                        <div class="inputs">
+                            <div class="form-group">
+                                <label for="direccion">Dirección:</label>
+                                <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+                                <span id="error-direccion" class="error-message" aria-live="polite">Por favor, introduce
+                                    tu dirección.</span><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="localidad">Localidad:</label>
+                                <input type="text" name="localidad" id="localidad" placeholder="Localidad">
+                                <span id="error-localidad" class="error-message" aria-live="polite">Por favor, introduce
+                                    tu localidad.</span><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="provincia">Provincia:</label>
+                                <input type="text" name="provincia" id="provincia" placeholder="Provincia">
+                                <span id="error-provincia" class="error-message" aria-live="polite">Por favor, introduce
+                                    tu provincia.</span><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="pais">Pais:</label>
+                                <input type="text" name="pais" id="pais" placeholder="Pais">
+                                <span id="error-pais" class="error-message" aria-live="polite">Por favor, introduce tu
+                                    pais.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="codigoPostal">Código Postal:</label>
+                                <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Código Postal">
+                                <span id="error-codigoPostal" class="error-message" aria-live="polite">Por favor,
+                                    introduce tu código Postal.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="titulo">
+                        <h2>Forma de pago</h2>
+                    </div>
+                    <button type="button" class="opcion" tabindex="0" class="hidden"
+                        onclick="toggleForm('tarjetaForm')">
+                        <div class="logoPago">
+                            <img width="80" src="img/payMethods/visa.jpg" alt="visa" />
+                        </div>
+                        <p>Tarjeta de crédito</p>
+                        <p class="subrayar">Seleccionar</p>
+                    </button>
+                    <div id="tarjetaForm" class="hidden">
+                        <h3>Pago con Tarjeta</h3>
+                        <div class="form-group">
+                            <label for="numTarjeta">Número de tarjeta:</label>
+                            <input type="text" id="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX">
+                            <span id="error-tarjeta" class="error-message" aria-live="polite">Por favor, introduce tu
+                                tarjeta.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha de vencimiento:</label>
+                            <input type="month" id="fecha">
+                            <span id="error-fecha" class="error-message" aria-live="polite">Por favor, introduce tu
+                                fecha de vencimiento.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="CVV">CVV:</label>
+                            <input type="number" placeholder="XXX" id="CVV">
+                            <span id="error-CVV" class="error-message" aria-live="polite">Por favor, introduce tu
+                                CVV.</span>
+                        </div>
+                    </div>
+                    <button type="button" class="opcion" tabindex="0" class="hidden" onclick="toggleForm('paypalForm')">
+                        <div class="logoPago">
+                            <img width="80" src="img/payMethods/paypal.png" alt="paypal" />
+                        </div>
+                        <p>Paypal</p>
+                        <p class="subrayar">Seleccionar</p>
+                    </button>
+                    <id id="paypalForm" class="hidden">
+                        <h3>Pago con Paypal</h3>
+                        <div class="form-group">
+                            <label>Correo electrónico:</label>
+                            <input type="email" placeholder="correo@ejemplo.com">
+                            <span id="error-correo" class="error-message" aria-live="polite">Por favor, introduce tu
+                                correo.</span>
+                        </div>
+
+                    </id>
+                    <button type="button" class="opcion" class="hidden" onclick="toggleForm('applePayForm')">
+                        <div class="logoPago">
+                            <img width="80" src="img/payMethods/applepay.png" alt="Apple Pay" />
+                        </div>
+                        <p>Apple pay</p>
+                        <p class="subrayar">Seleccionar</p>
+                    </button>
+
+                    <div id="applePayForm" class="hidden">
+                        <h3>Pago con Apple Pay</h3>
+                        <p>Apple Pay está vinculado a tu dispositivo.</p>
+                    </div>
+
+                    <button type="button" class="opcion" class="hidden" onclick="toggleForm('masterCardForm')">
+                        <div class="logoPago">
+                            <img width="80" src="img/payMethods/mastercard.jpg" alt="Mastercard" />
+                        </div>
+                        <p>Mastercard</p>
+                        <p class="subrayar">Seleccionar</p>
+                    </button>
+
+                    <div id="masterCardForm" class="hidden">
+                        <h3>Pago con Mastercard</h3>
+                        <p>Mastercard no funciona ahora mismo.</p><br>
+                        <p>Sentimos las molestias</p>
+                    </div>
+                </section>
+
+                <section id="ultSec">
+                    <div class="titulo">
+                        <h2>Resumen</h2>
+                    </div>
+                    <br>
+                        <div class="precioTotal">
+                            <h3>Total</h3>
+                            <br>
+                            <span class="precio">$0.00</span>
+
+                            <button type="submit" id="btnPagar">Pagar</button>
+                        </div>   
+                    </div>
+                    
+                </section>
+                
+            </main>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Sobre nosotros</h2>
+                <p>Lyra Project es una pagina web diseñada especificamente para dar la maxima calidad de
+                    reproduccion de audio y dar a conocer numerosos artistas por el mundo.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces relacionados</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planes.html">Plans</a></li>
+                    <li><a href="contacto.html">Contact</a></li>
+                    <li><a href="contacto.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contactanos</h2>
+                <p>Email: support@lyra.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lyra Project</p>
+        </div>
+    </footer>
+    <script src="js/pago.js"></script>
+</body>
+
+</html>
