@@ -265,6 +265,10 @@ header {
     border-top: 1px solid #444;
 }
 
+.enlace_licencia{
+    text-decoration: none;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
