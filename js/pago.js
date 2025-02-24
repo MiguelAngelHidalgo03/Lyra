@@ -4,7 +4,7 @@ function toggleForm(id) {
     if (!form) return;
 
     // Si es un formulario de pago, implementamos comportamiento toggle
-    if (["tarjetaForm", "paypalForm", "applePayForm", "masterCardForm input"].includes(id)) {
+    if (["tarjetaForm", "paypalForm", "applePayForm", "masterCardForm"].includes(id)) {
         if (form.classList.contains("show")) {
             // Si ya está abierto, lo cerramos y removemos el required
             form.classList.remove("show");
@@ -14,7 +14,7 @@ function toggleForm(id) {
             return;
         } else {
             // Cerramos los demás formularios de pago
-            let paymentForms = document.querySelectorAll("#tarjetaForm, #paypalForm, #applePayForm, #masterCardForm input");
+            let paymentForms = document.querySelectorAll("#tarjetaForm, #paypalForm, #applePayForm, #masterCardForm");
             paymentForms.forEach(f => {
                 if (f.id !== id) {
                     f.classList.remove("show");
@@ -31,14 +31,14 @@ function toggleForm(id) {
     form.setAttribute("aria-hidden", "false");
 
     // Si es un método de pago, asignamos el required a sus inputs
-    if (["tarjetaForm", "paypalForm", "applePayForm", "masterCardForm input"].includes(id)) {
+    if (["tarjetaForm", "paypalForm", "applePayForm", "masterCardForm"].includes(id)) {
         setPaymentRequired(id);
     }
 }
 
 // Función para asignar (o quitar) el atributo required a los inputs del método de pago seleccionado
 function setPaymentRequired(selectedId) {
-    const paymentForms = ["tarjetaForm", "paypalForm", "applePayForm", "masterCardForm input"];
+    const paymentForms = ["tarjetaForm", "paypalForm", "applePayForm", "masterCardForm"];
     paymentForms.forEach(id => {
         let container = document.getElementById(id);
         if (container) {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Verificamos que se haya seleccionado un método de pago
-        let paymentOption = document.querySelector("#tarjetaForm.show, #paypalForm.show, #applePayForm.show, #masterCardForm input");
+        let paymentOption = document.querySelector("#tarjetaForm.show, #paypalForm.show, #applePayForm.show, #masterCardForm.show");
         if (!paymentOption) {
             event.preventDefault();
             alert("Por favor, selecciona un método de pago y rellena sus campos.");
