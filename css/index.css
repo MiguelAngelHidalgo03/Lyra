@@ -696,6 +696,11 @@ button {
         /* Adjust padding for smaller screens */
     }
 
+    .enlace_licencia{
+    text-decoration: none;
+    color: white;
+}
+
     .header--actions button#login {
         margin-left: auto;
         /* Align login button to the right */
