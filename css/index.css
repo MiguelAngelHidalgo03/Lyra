@@ -437,6 +437,12 @@ button {
     font-weight: 700;
 }
 
+
+    .enlace_licencia{
+    text-decoration: none;
+    color: white;
+}
+
 /* Ensure buttons remain fixed in place */
 .artist-item p:nth-of-type(2),
 .genre-item p:nth-of-type(2),
@@ -695,11 +701,6 @@ button {
         padding: 0.5rem 0;
         /* Adjust padding for smaller screens */
     }
-
-    .enlace_licencia{
-    text-decoration: none;
-    color: white;
-}
 
     .header--actions button#login {
         margin-left: auto;
