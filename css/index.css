@@ -1025,6 +1025,11 @@ button {
     border-top: 1px solid #444;
 }
 
+.enlace_licencia{
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 768px) {
 
 
