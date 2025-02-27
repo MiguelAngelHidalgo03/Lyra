@@ -65,6 +65,45 @@ audio {
     /* Set font to Arial */
 }
 
+/* Estilos generales para los botones */
+button {
+    background-color: #1DB954; /* Color verde de Spotify */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: #17a74a; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+/* Para los botones de descarga */
+.container button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+
 body {
     background-color: var(--blanco);
 }
