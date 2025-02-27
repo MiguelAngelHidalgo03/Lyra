@@ -13,6 +13,29 @@
 }
 
 /* Vídeo */
+    .botones_descarga
+    {
+        margin-bottom: 50px;
+    }
+        
+.boton_descarga {
+    background-color: #99AECC;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton_descarga:hover {
+    background-color: blue;
+    transform: scale(1.05);
+}
 
 h1 {
     color: var(--negro);
