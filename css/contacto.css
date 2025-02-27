@@ -42,10 +42,13 @@ h1 {
 }
 
 .videoResumenLyra {
-    margin-bottom: 30px;
-    width="1500";
-    height="450";
+    width: 80%;  /* Ajusta al 80% del contenedor */
+    max-width: 800px; /* Máximo ancho */
+    height: 450px; /* Altura fija */
+    display: block; /* Centrar */
+    margin: 0 auto; /* Centrar */
 }
+
 
 .container {
     text-align: center;
