@@ -16,6 +16,9 @@
             <h1>Lyra Project</h1>
         </div>
         <div class="search">
+            <div>
+                <img src="img/search.png" class="search-icon" alt="search icon">
+            </div>
             <input type="text" id="search" name="search" class="input" placeholder="¿Qué canción buscas?">
         </div>
         <div class="header--actions">
@@ -28,24 +31,44 @@
     <div class="container">
         <h1>Video Resumen Lyra</h1>
         <iframe class="videoResumenLyra" src="https://www.youtube.com/embed/fvQNLDmRkRE" 
-            title="Video Resumen Lyra" frameborder="0" allowfullscreen>
+            title="Video Resumen Lyra" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
-        <br>
-        <a class="download-btn" href="video/LyraResumen.mp4" download>Descargar Video</a>
 
-        <h1>Podcast Resumen Lyra</h1>
+        <h1>Podcast Resumen Lyra</h2>
         <audio class="podcastResumenLyra" controls>
             <source src="audio/LyraPodcast.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
-        <br>
-        <a class="download-btn" href="audio/LyraPodcast.mp3" download>Descargar Audio</a>
     </div>
 
-    <footer>
-        <p>Lyra Project - Todos los derechos reservados</p>
-        <a href="https://creativecommons.org/licenses/by/4.0/" style="color: white;">CC BY 4.0</a>
-    </footer>
+   <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h2>Sobre nosotros</h2>
+                        <p>Lyra Project es una página web diseñada específicamente para dar la máxima calidad de
+                            reproducción de audio y dar a conocer numerosos artistas por el mundo.</p>
+                    </div>
+                   <div class="footer-section links">
+                        <h2>Secciones</h2>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="planes.html">Planes</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="contacto.html">Soporte</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact">
+                        <h2>Contáctanos</h2>
+                        <p>Email: support@lyra.com</p>
+                        <p>Teléfono: +123 456 7890</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <a class="enlace_licencia" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+                </div>
+            </footer>
+            </div>
 </body>
 
 </html>
