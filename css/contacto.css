@@ -13,12 +13,11 @@
 }
 
 /* Vídeo */
-    .botones_descarga
-    {
-        margin-bottom: 50px;
-    }
+.botones_descarga{
+    margin-bottom: 50px;
+}
         
-.boton_descarga {
+.boton_descarga{
     background-color: #99AECC;
     color: white;
     font-size: 16px;
@@ -32,7 +31,7 @@
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.boton_descarga:hover {
+.boton_descarga:hover{
     background-color: blue;
     transform: scale(1.05);
 }
